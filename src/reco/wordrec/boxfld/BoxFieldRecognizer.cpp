@@ -57,7 +57,7 @@
 #include "LTKException.h"
 #include "LTKOSUtilFactory.h"
 #include "LTKOSUtil.h"
-
+#include <limits.h>
 
 extern void *m_hAlgoDLLHandle;
 

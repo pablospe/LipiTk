@@ -41,6 +41,8 @@
 #ifndef __COMMONMACORS_H
 #define __COMMONMACORS_H
 
+#include <string.h>
+
 #include "LTKTypes.h"
 
 /** @file LTKmacros.h

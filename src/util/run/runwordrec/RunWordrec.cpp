@@ -51,6 +51,7 @@
 #include "LTKInc.h"
 #include "LTKOSUtilFactory.h"
 #include "LTKOSUtil.h"
+#include "LTKMacros.h"
 
 int numChoices = 2;
 char strTestLstFile[MAX_PATH] = "";

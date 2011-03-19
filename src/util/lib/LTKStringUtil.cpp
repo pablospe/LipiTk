@@ -42,6 +42,7 @@
 #include "LTKStringUtil.h"
 #include "LTKLoggerUtil.h"
 #include <sstream>
+#include <string.h>
 
 /**********************************************************************************
 * AUTHOR		: Balaji R.

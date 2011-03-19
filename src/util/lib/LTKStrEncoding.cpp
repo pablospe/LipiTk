@@ -28,6 +28,8 @@
  
 #include "LTKStrEncoding.h"
 #include "LTKLoggerUtil.h"
+#include <limits.h>
+
 
 /************************************************************************
  * FILE DESCR: Implementation of LTKInkUtils that computes the statistics
