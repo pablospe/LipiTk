@@ -1,0 +1,6 @@
+<SCRIPT=NUMERALS>
+<DATASET=LipiTK Team Data>
+<VERSION=1.1.0>
+<NO_OF_SAMPLES=10>
+<BYTEORDER=LE>
+<COMMENT= This is the sample data collected within the team>

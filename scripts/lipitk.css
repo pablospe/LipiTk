@@ -1,0 +1,76 @@
+H1
+{
+    COLOR: #2990ca;
+    FONT-FAMILY: Arial, 'sans serif';
+    TEXT-ALIGN: center
+}
+H2
+{
+    COLOR: #2990ca;
+    FONT-FAMILY: Arial, 'sans serif';
+    TEXT-ALIGN: left
+}
+BODY
+{
+    FONT-FAMILY: Arial, 'sans serif';
+    BACKGROUND-COLOR: white
+}
+TABLE.lipiTable
+{
+    BORDER-RIGHT: aqua thin;
+    BORDER-TOP: aqua thin;
+    BORDER-LEFT: aqua thin;
+    BORDER-BOTTOM: aqua thin;
+    FONT-FAMILY: Arial;
+    VERTICAL_ALIGN: middle
+    align: center
+}
+TH.lipiTable
+{
+    BORDER-RIGHT: olive 1px solid;
+    PADDING-RIGHT: 5pt;
+    BORDER-TOP: olive 1px solid;
+    PADDING-LEFT: 5pt;
+    PADDING-BOTTOM: 5pt;
+    BORDER-LEFT: olive 1px solid;
+    COLOR: #eb5f01;
+    PADDING-TOP: 5pt;
+    BORDER-BOTTOM: olive 1px solid;
+    FONT-FAMILY: Arial, 'sans serif';
+    TEXT-ALIGN: center
+}
+TD.lipiTable
+{
+    BORDER-RIGHT: olive 1px solid;
+    PADDING-RIGHT: 5pt;
+    BORDER-TOP: olive 1px solid;
+    PADDING-LEFT: 10pt;
+    PADDING-BOTTOM: 5pt;
+    BORDER-LEFT: olive 1px solid;
+    PADDING-TOP: 5pt;
+    BORDER-BOTTOM: olive 1px solid;
+    FONT-FAMILY: Arial, 'sans serif';
+    TEXT-ALIGN: center
+}
+H2
+{
+}
+.SmallOrange
+{
+    FONT-WEIGHT: bolder;
+    COLOR: #eb5f01;
+    FONT-FAMILY: Arial;
+    TEXT-ALIGN: center
+}
+H3
+{
+    COLOR: #eb5f01;
+    FONT-FAMILY: Arial, 'sans serif'
+}
+.noBorder
+{
+    BORDER-RIGHT: medium none;
+    BORDER-TOP: medium none;
+    BORDER-LEFT: medium none;
+    BORDER-BOTTOM: medium none
+}

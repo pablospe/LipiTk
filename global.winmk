@@ -1,0 +1,83 @@
+######################
+# Configuration and Env Variable
+######################
+
+DIST_COMMON =  README AUTHORS COPYING TODO ChangeLog INSTALL Makefile.linux Makefile.win 
+#DISTDATA=
+#DISTSRCDIR=
+#DISTINC=
+#DISTLIB=
+
+DISTFILES=$(DIST_COMMON) $(DISTDATA) $(DISTSRCDIR) $(DISTINC) $(DISTLIB)
+SEP=\\
+LIPITK=lipitk
+TMPDIR=tmp
+F=/f
+#LIPI_ROOT=D:\lipitk
+LIPITK_BIN=$(LIPI_ROOT)\bin
+LIPITK_DOC=$(LIPI_ROOT)\doc
+LIPITK_LIB=$(LIPI_ROOT)\lib
+LIPITK_PACK=$(LIPI_ROOT)\package
+LIPITK_PROJ=$(LIPI_ROOT)\projects
+LIPITK_SCRIPT=$(LIPI_ROOT)\scripts
+LIPITK_UTILS=$(LIPI_ROOT)\utils
+LIPITK_SRC=$(LIPI_ROOT)\src
+LIPITK_SRC_LIB=$(LIPITK_SRC)\lib
+LIPITK_TMP=$(LIPITK_PACK)\tmp
+VERSION=v1.0
+OS=win
+RELOPT=Release
+WIN32=Win32
+BUILD=BUILD
+CLEAN=CLEAN
+
+######################
+# Commands
+######################
+COPY=copy
+CP= copy
+RM=erase
+AR=ar ruv
+LD=link
+MV=move
+MAKE=nmake
+ERASE=erase
+MKDIR=mkdir
+RMDIR=$(LIPITK_BIN)\deldir
+CABARC=cabarc 
+OPT=-r -p n
+CHDIR=cd
+CD=cd
+MOVE=move
+MSDEV=msdev
+PERL=perl
+
+##########################
+# Variables
+##########################
+DSP_LOCATION=windows\vc6.0
+
+################
+#  Path variables for windows
+################
+LIPITK_UTILS=$(LIPI_ROOT)\src\util
+LIPITK_SRC=$(LIPI_ROOT)\src
+LIPITK_RECO=$(LIPI_ROOT)\src\reco
+LIPITK_RECO_UTIL=$(LIPI_ROOT)\src\reco\util
+LIPITK_RECO_SHAPEREC=$(LIPI_ROOT)\src\reco\shaperec
+LIPITK_RECO_WORDREC=$(LIPI_ROOT)\src\reco\wordrec
+LIPITK_RECO_SHAPEREC_COMMON=$(LIPI_ROOT)\src\reco\shaperec\common
+LIPITK_COMMON=$(LIPI_ROOT)\src\common
+LIPITK_UTILS_RUN=$(LIPI_ROOT)\src\util\run
+LIPITK_APP_SAMPLES=$(LIPI_ROOT)\src\apps\samples
+
+
+######################################################################
+#    VARIABLES FOR FEATURE EXTRACTOR 
+######################################################################
+LIPITK_RECO_SHAPEREC_FE=$(LIPI_ROOT)\src\reco\shaperec\featureextractor
+LIPITK_RECO_SHAPEREC_FE_COMMON=$(LIPI_ROOT)\src\reco\shaperec\featureextractor\common
+LIPITK_RECO_SHAPEREC_FE_POINTFLOAT=$(LIPI_ROOT)\src\reco\shaperec\featureextractor\pointfloat
+LIPITK_RECO_SHAPEREC_FE_L7=$(LIPI_ROOT)\src\reco\shaperec\featureextractor\l7
+LIPITK_RECO_SHAPEREC_FE_NPEN=$(LIPI_ROOT)\src\reco\shaperec\featureextractor\npen
+LIPITK_RECO_SHAPEREC_FE_SS=$(LIPI_ROOT)/src/reco/shaperec/featureextractor/substroke

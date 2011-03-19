@@ -1,0 +1,10 @@
+0 e:/lipitk/projects/numerals/data/raw/usr[6-7]/000000t*.txt
+1 e:/lipitk/projects/numerals/data/raw/usr[6-7]/000001t*.txt
+2 e:/lipitk/projects/numerals/data/raw/usr[6-7]/000002t*.txt
+3 e:/lipitk/projects/numerals/data/raw/usr[6-7]/000003t*.txt
+4 e:/lipitk/projects/numerals/data/raw/usr[6-7]/000004t*.txt
+5 e:/lipitk/projects/numerals/data/raw/usr[6-7]/000005t*.txt
+6 e:/lipitk/projects/numerals/data/raw/usr[6-7]/000006t*.txt
+7 e:/lipitk/projects/numerals/data/raw/usr[6-7]/000007t*.txt
+8 e:/lipitk/projects/numerals/data/raw/usr[6-7]/000008t*.txt
+9 e:/lipitk/projects/numerals/data/raw/usr[6-7]/000009t*.txt

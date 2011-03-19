@@ -1,0 +1,39 @@
+<html>
+<head>
+<script>
+function update()
+{
+ strInput=document.frm.input.value;
+if(strInput.charAt(strInput.length-1)!='\\' && strInput.charAt(strInput.length-1)!='/')
+{
+	strInput+="\\";
+}
+strFilePath=document.frm.filepath.value;
+if(strFilePath.charAt(strFilePath.length-1)!='\\' && strFilePath.charAt(strFilePath.length-1)!='/')
+{
+	strFilePath+="\\";
+}
+strImgPath=document.frm.imgpath.value;
+if(strImgPath.charAt(strImgPath.length-1)!='\\' && strImgPath.charAt(strImgPath.length-1)!='/')
+{
+	strImgPath+="\\";
+}
+//alert(strInput+":"+strFilePath+":"+strImgPath);
+var link=strInput+"confusion_matrix.html?"+strFilePath+"$"+strImgPath;
+location.href=link;
+}
+</script>
+<LINK REL=StyleSheet HREF="lipitk.css" TITLE="Lipi">
+<TITLE>LipiToolkit Evaluation Tool</TITLE> 
+</head>
+<H3>View Evaluation Tool Results</H3>
+<br><br><br>
+<table>
+<form name=frm>
+<tr><td CLASS=noBorder>Location of confusion_matrix.html</td><td CLASS=noBorder><input name=input size=50><br></td></tr>
+<tr><td CLASS=noBorder>Location of samples</td><td CLASS=noBorder><input type=text name=filepath size=50><br></td></tr>
+<tr><td CLASS=noBorder>Location of images</td><td CLASS=noBorder><input type=text name=imgpath size=50><br></td></tr>
+</form>
+</table><br><br>
+<input type=button value=View onclick="update();">
+</html>
