@@ -128,6 +128,15 @@ public:
 
 	static int readUnipenInkFileWithAnnotation(const string& inkFile,const string& hierarchyLevel,const string& quality, LTKTraceGroup& traceGroup,map<string,string>& traceIndicesCommentsMap,LTKCaptureDevice& captureDevice, LTKScreenContext& screenContext);
 
+    /**
+     * This is a static method which reads a InkML file and loads it into a trace group object
+     * @param inkFile Name of the ink file to be read
+     * @param traceGroup trace group into which the ink file has to be read into
+     * @return SUCCESS on successful read operation
+     */
+
+    static int readInkMLFile(const string& inkFile, LTKTraceGroup& traceGroup);
+    
 
 	// @}
 };

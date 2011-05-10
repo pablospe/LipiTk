@@ -658,6 +658,29 @@ int LTKInkFileReader::readUnipenInkFileWithAnnotation(const string& inkFile,cons
 }
 
 
+/**********************************************************************************
+* AUTHOR        : Pablo Speciale
+* DATE          : 10-May-2011
+* NAME          : readInkMLFile
+* DESCRIPTION   : reads contents of a file containing ink stored in InkML format into a trace 
+*                 group object.
+* 
+* ARGUMENTS     : inkFile - name of the file containing the ink
+*                 traceGroup - trace group into which the ink has to be read into
+*
+* RETURNS       : SUCCESS on successfully reading the ink file into
+* NOTES         :
+* CHANGE HISTROY
+* Author            Date                Description of change
+*************************************************************************************/
+
+int LTKInkFileReader::readInkMLFile(const string& inkFile, LTKTraceGroup& traceGroup)
+{
+
+    return SUCCESS;
+}
+
+
 
 /**********************************************************************************
 * AUTHOR		: Balaji R.
