@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 2.6)
-include( $ENV{LIPI_ROOT}/global.cmake )
+set( LIPI_ROOT ${CMAKE_CURRENT_LIST_DIR}/../.. )
+include( ${LIPI_ROOT}/global.cmake )
 
 project(common)
 
