@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
 
-project(wordreccommon)
+project(boxfld)
 
 set( LIPI_ROOT ${CMAKE_CURRENT_LIST_DIR}/../../../.. )
-include( ${LIPI_ROOT}/CMake/static_lib_common.cmake )
+include( ${LIPI_ROOT}/CMake/shared_lib_common.cmake )
+
