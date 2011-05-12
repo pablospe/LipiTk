@@ -75,3 +75,18 @@ set( LIPITK_WORDREC_BOXFLD ${LIPITK_WORDREC}/boxfld )
 #############################################
 # set( LIPITK_SAMPLES_SHAPERECTST ${LIPITK_SAMPLES}/shaperectst )
 # set( LIPITK_SAMPLES_WORDRECTST ${LIPITK_SAMPLES}/wordrectst )
+
+
+# Include all
+set( LIPITK_INCLUDE ${LIPITK_SRC_INCLUDE}
+                    ${LIPITK_SRC_UTILS_LIB}
+                    ${LIPITK_SHAPEREC_ACTIVEDTW}
+                    ${LIPITK_SHAPEREC_COMMON}
+                    ${LIPITK_SHAPEREC_NEURALNET}
+                    ${LIPITK_SHAPEREC_NN}
+                    ${LIPITK_SHAPEREC_PREPROC}
+                    ${LIPITK_SHAPEREC_FE_COMMON}
+                    ${LIPITK_SHAPEREC_FE_L7}
+                    ${LIPITK_SHAPEREC_FE_NPEN}
+                    ${LIPITK_SHAPEREC_FE_POINTFLOAT}
+                    ${LIPITK_SHAPEREC_FE_SS} )

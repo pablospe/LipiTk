@@ -10,8 +10,4 @@ include_directories( ${LIPITK_SRC_INCLUDE} ${LIPITK_SRC_UTILS_LIB} )
 add_library( ${PROJECT_NAME} SHARED ${sources} )
 
 # Install
-INSTALL(TARGETS ${PROJECT_NAME}
-  RUNTIME DESTINATION bin
-  LIBRARY DESTINATION lib
-  ARCHIVE DESTINATION lib/static
-)
+include( ${CMAKE_CURRENT_LIST_DIR}/install_targets.cmake )
