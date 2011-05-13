@@ -9,5 +9,4 @@ add_subdirectory( ${LIPITK_SRC_UTILS_FFW} )
 add_subdirectory( ${LIPITK_SRC_UTILS_IMGWRITER} )
 add_subdirectory( ${LIPITK_SRC_UTILS_MDV} )
 
-add_subdirectory( ${LIPITK_SRC_UTILS_RUNSHAPEREC} )
-add_subdirectory( ${LIPITK_SRC_UTILS_RUNWORDREC} )
+add_subdirectory( ${LIPITK_SRC_UTILS_RUN} )
