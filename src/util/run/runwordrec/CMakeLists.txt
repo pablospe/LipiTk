@@ -7,4 +7,4 @@ include( ${LIPI_ROOT}/CMake/global.cmake )
 include( ${LIPI_ROOT}/CMake/binary_common.cmake )
 
 
-target_link_libraries( ${PROJECT_NAME} stdc++ dl ${LIPITK_STATIC_LIB} )
+target_link_libraries( ${PROJECT_NAME} ${LINKLIB} wordreccommon ${LIPITK_STATIC_LIB} )

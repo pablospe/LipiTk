@@ -108,12 +108,13 @@ set( LIPITK_DYNAMIC_LIB  activedtw
                          substroke )
 
 # STATIC_LIBDIR
-set( LIPITK_STATIC_LIB   common
-                         util )
+set( LIPITK_STATIC_LIB util
+                       common )
 #                   featureextractorcommon )
 #                   shaperecommon )
 #                   wordreccommon )
 
+set( LINKLIB stdc++ dl )
 
 # Link libraries
 set( LIPITK_LIB ${LIPITK_DYNAMIC_LIB} ${LIPITK_STATIC_LIB} )
