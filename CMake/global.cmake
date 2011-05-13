@@ -26,11 +26,11 @@ set( LIPITK_SRC_UTILS ${LIPITK_SRC}/util )
 set( LIPITK_SRC_UTILS_LIB ${LIPITK_SRC_UTILS}/lib )
 set( LIPITK_LOGGER ${LIPITK_SRC_UTILS}/logger )
 # set( LIPITK_SRC_UTILS_TRAINHMM ${LIPITK_SRC_UTILS}/trainhmm )
-# set( LIPITK_SRC_UTILS_IMGWRITER ${LIPITK_SRC_UTILS}/imgwriter )
+set( LIPITK_SRC_UTILS_IMGWRITER ${LIPITK_SRC_UTILS}/imgwriter )
 # set( LIPITK_SRC_UTILS_RUN ${LIPITK_SRC_UTILS}/run )
-# set( LIPITK_SRC_UTILS_RUNSHAPEREC ${LIPITK_SRC_UTILS}/run/runshaperec )
-# set( LIPITK_SRC_UTILS_RUNWORDREC ${LIPITK_SRC_UTILS}/run/runwordrec )
-# set( LIPITK_SRC_UTILS_MDV ${LIPITK_SRC_UTILS}/mdv )
+set( LIPITK_SRC_UTILS_RUNSHAPEREC ${LIPITK_SRC_UTILS}/run/runshaperec )
+set( LIPITK_SRC_UTILS_RUNWORDREC ${LIPITK_SRC_UTILS}/run/runwordrec )
+set( LIPITK_SRC_UTILS_MDV ${LIPITK_SRC_UTILS}/mdv )
 set( LIPITK_SRC_UTILS_FFW ${LIPITK_SRC_UTILS}/featurefilewriter )
 set( LIPITK_COMMON ${LIPITK_SRC}/common )
 # set( LIPITK_SAMPLES ${LIPITK_SRC_APPS}/samples )
@@ -95,22 +95,22 @@ set( LIPITK_INCLUDE ${LIPITK_SRC_INCLUDE}
 
 
 # DYNAMIC_LIB
-set( LIPITK_DYNAMIC_LIBDIR activedtw
-                  boxfld
-                  l7
-                  lipiengine
-                  logger
-                  neuralnet
-                  nn
-                  npen
-                  pointfloat
-                  preproc
-                  substroke )
+set( LIPITK_DYNAMIC_LIB  activedtw
+                         boxfld
+                         l7
+                         lipiengine
+                         logger
+                         neuralnet
+                         nn
+                         npen
+                         pointfloat
+                         preproc
+                         substroke )
 
 # STATIC_LIBDIR
-set( LIPITK_STATIC_LIB common
-                  util
-                  featureextractorcommon )
+set( LIPITK_STATIC_LIB   common
+                         util )
+#                   featureextractorcommon )
 #                   shaperecommon )
 #                   wordreccommon )
 
