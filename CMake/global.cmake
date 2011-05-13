@@ -77,7 +77,7 @@ set( LIPITK_WORDREC_BOXFLD ${LIPITK_WORDREC}/boxfld )
 # set( LIPITK_SAMPLES_WORDRECTST ${LIPITK_SAMPLES}/wordrectst )
 
 
-# Include all
+# Include all headers
 set( LIPITK_INCLUDE ${LIPITK_SRC_INCLUDE}
                     ${LIPITK_SRC_UTILS_LIB}
                     ${LIPITK_SHAPEREC_ACTIVEDTW}
@@ -89,4 +89,31 @@ set( LIPITK_INCLUDE ${LIPITK_SRC_INCLUDE}
                     ${LIPITK_SHAPEREC_FE_L7}
                     ${LIPITK_SHAPEREC_FE_NPEN}
                     ${LIPITK_SHAPEREC_FE_POINTFLOAT}
-                    ${LIPITK_SHAPEREC_FE_SS} )
+                    ${LIPITK_SHAPEREC_FE_SS}
+                    ${LIPITK_WORDREC_BOXFLD}
+                    ${LIPITK_LIPIENGINE} )
+
+
+# DYNAMIC_LIB
+set( LIPITK_DYNAMIC_LIBDIR activedtw
+                  boxfld
+                  l7
+                  lipiengine
+                  logger
+                  neuralnet
+                  nn
+                  npen
+                  pointfloat
+                  preproc
+                  substroke )
+
+# STATIC_LIBDIR
+set( LIPITK_STATIC_LIB common
+                  util
+                  featureextractorcommon )
+#                   shaperecommon )
+#                   wordreccommon )
+
+
+# Link libraries
+set( LIPITK_LIB ${LIPITK_DYNAMIC_LIB} ${LIPITK_STATIC_LIB} )

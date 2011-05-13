@@ -4,21 +4,7 @@ project(featurefilewriter)
 
 set( LIPI_ROOT ${CMAKE_CURRENT_LIST_DIR}/../../.. )
 include( ${LIPI_ROOT}/CMake/global.cmake )
-
-# Sources
-file( GLOB sources "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp" )
-
-# Include
-include_directories( ${LIPITK_INCLUDE} )
-
-add_executable( ${PROJECT_NAME} ${sources} )
-
-target_link_libraries( ${PROJECT_NAME} stdc++ dl shaperecommon util common featureextractorcommon )
+include( ${LIPI_ROOT}/CMake/binary_common.cmake )
 
 
-# Install
-INSTALL(TARGETS ${PROJECT_NAME}
-  RUNTIME DESTINATION bin
-  LIBRARY DESTINATION lib
-  ARCHIVE DESTINATION lib/static
-)
+target_link_libraries( ${PROJECT_NAME} stdc++ dl shaperecommon ${LIPITK_STATIC_LIB} )
