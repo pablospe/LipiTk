@@ -21,7 +21,7 @@ set( LIPITK_LIPIENGINE ${LIPITK_SRC}/lipiengine )
 set( LIPITK_RECO ${LIPITK_SRC}/reco )
 # set( LIPITK_RECO_UTIL ${LIPITK_RECO}/util )
 # set( LIPITK_TOOLS ${LIPITK_SRC}/tools )
-# set( LIPITK_SRC_APPS ${LIPITK_SRC}/apps )
+set( LIPITK_SRC_APPS ${LIPITK_SRC}/apps )
 set( LIPITK_SRC_UTILS ${LIPITK_SRC}/util )
 set( LIPITK_SRC_UTILS_LIB ${LIPITK_SRC_UTILS}/lib )
 set( LIPITK_LOGGER ${LIPITK_SRC_UTILS}/logger )
@@ -33,7 +33,7 @@ set( LIPITK_SRC_UTILS_RUNWORDREC ${LIPITK_SRC_UTILS_RUN}/runwordrec )
 set( LIPITK_SRC_UTILS_MDV ${LIPITK_SRC_UTILS}/mdv )
 set( LIPITK_SRC_UTILS_FFW ${LIPITK_SRC_UTILS}/featurefilewriter )
 set( LIPITK_COMMON ${LIPITK_SRC}/common )
-# set( LIPITK_SAMPLES ${LIPITK_SRC_APPS}/samples )
+set( LIPITK_SAMPLES ${LIPITK_SRC_APPS}/samples )
 
 #############################################
 ##   SHAPEREC MACROS
@@ -73,8 +73,8 @@ set( LIPITK_WORDREC_BOXFLD ${LIPITK_WORDREC}/boxfld )
 #############################################
 ##   SAMPLE MACROS
 #############################################
-# set( LIPITK_SAMPLES_SHAPERECTST ${LIPITK_SAMPLES}/shaperectst )
-# set( LIPITK_SAMPLES_WORDRECTST ${LIPITK_SAMPLES}/wordrectst )
+set( LIPITK_SAMPLES_SHAPERECTST ${LIPITK_SAMPLES}/shaperectst )
+set( LIPITK_SAMPLES_WORDRECTST ${LIPITK_SAMPLES}/wordrectst )
 
 
 # Include all headers
