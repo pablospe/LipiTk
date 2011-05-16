@@ -21,14 +21,14 @@ file( GLOB headers_logger     "${LIPITK_LOGGER}/*.h" )
 
 
 # Install headers (set the location)
-INSTALL( FILES ${headers}            DESTINATION include/ )
-INSTALL( FILES ${headers_util}       DESTINATION include/util )
-INSTALL( FILES ${headers_shaperec}   DESTINATION include/shaperec )
+INSTALL( FILES ${headers}            DESTINATION ${CMAKE_INSTALL_PREFIX}/include/ )
+INSTALL( FILES ${headers_util}       DESTINATION ${CMAKE_INSTALL_PREFIX}/include/util )
+INSTALL( FILES ${headers_shaperec}   DESTINATION ${CMAKE_INSTALL_PREFIX}/include/shaperec )
 INSTALL( FILES ${headers_shaperec_featureextractor}
-                                     DESTINATION include/shaperec/featureextractor )
-INSTALL( FILES ${headers_wordrec}    DESTINATION include/wordrec )
-INSTALL( FILES ${headers_lipiengine} DESTINATION include/lipiengine )
-INSTALL( FILES ${headers_logger}     DESTINATION include/logger )
+                                     DESTINATION ${CMAKE_INSTALL_PREFIX}/include/shaperec/featureextractor )
+INSTALL( FILES ${headers_wordrec}    DESTINATION ${CMAKE_INSTALL_PREFIX}/include/wordrec )
+INSTALL( FILES ${headers_lipiengine} DESTINATION ${CMAKE_INSTALL_PREFIX}/include/lipiengine )
+INSTALL( FILES ${headers_logger}     DESTINATION ${CMAKE_INSTALL_PREFIX}/include/logger )
 
 
 # make uninstall

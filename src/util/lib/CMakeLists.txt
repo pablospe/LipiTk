@@ -24,7 +24,7 @@ set( sources LTKCheckSumGenerate.cpp
 include_directories( ${LIPITK_SRC_INCLUDE} ${LIPITK_SRC_UTILS_LIB} )
 
 # Static
-add_library( ${PROJECT_NAME} STATIC ${sources} )
+add_library( ${PROJECT_NAME} SHARED ${sources} )
 
 # Install
 INSTALL(TARGETS ${PROJECT_NAME}

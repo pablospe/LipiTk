@@ -108,11 +108,11 @@ set( LIPITK_DYNAMIC_LIB  activedtw
                          substroke )
 
 # STATIC_LIBDIR
-set( LIPITK_STATIC_LIB util
-                       common )
-#                   featureextractorcommon )
-#                   shaperecommon )
-#                   wordreccommon )
+set( LIPITK_STATIC_LIB  util
+                        common 
+                        featureextractorcommon
+                        shaperecommon
+                        wordreccommon )
 
 set( LINKLIB stdc++ dl )
 
@@ -120,6 +120,24 @@ set( LINKLIB stdc++ dl )
 set( LIPITK_LIB ${LIPITK_DYNAMIC_LIB} ${LIPITK_STATIC_LIB} )
 
 
-set( LIPITK_DYNAMIC_LIBDIR ${LIPI_ROOT}/lib )
-set( LIPITK_STATIC_LIBDIR ${LIPITK_SRC}/lib )
+set( LIPITK_DYNAMIC_LIBDIR ${CMAKE_INSTALL_PREFIX}/lib  )
+set( LIPITK_STATIC_LIBDIR  ${CMAKE_INSTALL_PREFIX}/lib/static  )
 set( LIPITK_LIBDIR ${LIPITK_DYNAMIC_LIBDIR} ${LIPITK_STATIC_LIBDIR} )
+
+
+
+
+
+# Variables exportadas. Una vez instalado!!!
+
+set( LIPITK_INCLUDE_DIRS ${CMAKE_INSTALL_PREFIX}/include/ 
+                         ${CMAKE_INSTALL_PREFIX}/include/util 
+                         ${CMAKE_INSTALL_PREFIX}/include/shaperec
+                         ${CMAKE_INSTALL_PREFIX}/include/shaperec/featureextractor 
+                         ${CMAKE_INSTALL_PREFIX}/include/wordrec 
+                         ${CMAKE_INSTALL_PREFIX}/include/lipiengine 
+                         ${CMAKE_INSTALL_PREFIX}/include/logger )
+
+
+set( LIPITK_LIBRARIES_DIRS ${LIPITK_DYNAMIC_LIBDIR} ${LIPITK_STATIC_LIBDIR} )
+set( LIPITK_LIBRARIES ${LIPITK_DYNAMIC_LIB} ${LIPITK_STATIC_LIB} )

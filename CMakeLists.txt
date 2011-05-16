@@ -23,13 +23,11 @@ INCLUDE(CPack)
 
 
 # Install the export set for use with the install-tree
-# install(EXPORT ${PROJECT_NAME}LibraryDepends DESTINATION
-#                "${CMAKE_INSTALL_PREFIX}"
-#                COMPONENT dev)
+install(EXPORT LipiTkLibraryDepends DESTINATION "${CMAKE_INSTALL_PREFIX}" )
 
 # Create a LipiTkConfig.cmake file for the use from the install tree and install it
-set( LIPITK_INCLUDE_DIRS  "${LIPITK_INCLUDE}")
-set( LIPI_LIB_DIR         "${LIPITK_LIB}")
+# set( LIPITK_INCLUDE_DIRS  "${LIPITK_INCLUDE_DIRS}")
+# set( LIPI_LIB_DIR         "${LIPITK_LIBRARIES}")
 set( LIPI_CMAKE_DIR       "${CMAKE_INSTALL_PREFIX}")
 configure_file( CMake/LipiTkConfig.cmake.in
                 "${PROJECT_BINARY_DIR}/InstallFiles/LipiTkConfig.cmake" @ONLY)
