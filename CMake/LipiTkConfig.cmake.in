@@ -1,0 +1,14 @@
+# - Config file for the FooBar package
+# It defines the following variables
+#  LIPITK_INCLUDE - include directories for FooBar
+#  LIPITK_LIB    - libraries to link against
+#  LIPITK_LIBDIR - library directories for FooBar (normally not used!)
+
+# Tell the user project where to find our headers and libraries
+set( LIPITK_INCLUDE "@LIPITK_INCLUDE@" )
+set( LIPITK_LIB "@LIPITK_LIB@" )
+set( LIPITK_LIBDIR "@LIPITK_LIBDIR@" )
+
+# Our library dependencies (contains definitions for IMPORTED targets)
+#include( "@LIPI_CMAKE_DIR@/@PROJECT_NAME@LibraryDepends.cmake" )
+
