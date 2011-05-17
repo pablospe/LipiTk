@@ -1,0 +1,6 @@
+#ifndef __LTKCONFIG_H
+#define __LTKCONFIG_H
+
+#define LIPI_ROOT "@LIPI_CMAKE_DIR@"
+
+#endif

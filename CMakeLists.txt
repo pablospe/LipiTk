@@ -37,6 +37,11 @@ install( FILES
 
 
 
+# Create the "LTKConfig.h" header
+configure_file( CMake/LTKConfig.h.in
+                "${LIPI_CMAKE_DIR}/include/LTKConfig.h" )
+
+
 # 
 # MESSAGE( STATUS "PROJECT_BINARY_DIR: " ${PROJECT_BINARY_DIR} )
 # MESSAGE( STATUS "CMAKE_CURRENT_LIST_DIR: " ${CMAKE_CURRENT_LIST_DIR} )
