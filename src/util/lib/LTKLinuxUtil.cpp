@@ -41,6 +41,7 @@
 #include "LTKLinuxUtil.h"
 #include "LTKMacros.h"
 #include "LTKLoggerUtil.h"
+// #include "LTKConfig.h"
 
 
 #include <dlfcn.h>
@@ -347,7 +348,7 @@ int LTKLinuxUtil::getSystemTimeString(string& outStr)
 
 void* LTKLinuxUtil::getLibraryHandle(const string& libName)
 {
-    string lipiRoot= getEnvVariable(LIPIROOT_ENV_STRING) ;
+    string lipiRoot = getEnvVariable(LIPIROOT_ENV_STRING) ;
     string libNameLinux = lipiRoot + "/" + "lib" + "/" + "lib" + libName + ".so";
 
     void* libHandle = NULL;
