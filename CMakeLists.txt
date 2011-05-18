@@ -6,6 +6,13 @@ set( LIPI_ROOT ${CMAKE_CURRENT_LIST_DIR} )
 include( ${LIPI_ROOT}/CMake/global.cmake )
 
 
+set( LIPI_CMAKE_DIR "${CMAKE_INSTALL_PREFIX}")
+
+# Create the "LTKConfig.h" header (for internal use)
+configure_file( CMake/LTKConfig.h.in
+                "${PROJECT_BINARY_DIR}/include/LTKConfig.h" )
+
+
 add_subdirectory( ${LIPITK_SRC} )
 
 
@@ -26,9 +33,7 @@ INCLUDE(CPack)
 install(EXPORT LipiTkLibraryDepends DESTINATION "${CMAKE_INSTALL_PREFIX}" )
 
 # Create a LipiTkConfig.cmake file for the use from the install tree and install it
-# set( LIPITK_INCLUDE_DIRS  "${LIPITK_INCLUDE_DIRS}")
-# set( LIPI_LIB_DIR         "${LIPITK_LIBRARIES}")
-set( LIPI_CMAKE_DIR       "${CMAKE_INSTALL_PREFIX}")
+set( LIPI_CMAKE_DIR "${CMAKE_INSTALL_PREFIX}")
 configure_file( CMake/LipiTkConfig.cmake.in
                 "${PROJECT_BINARY_DIR}/InstallFiles/LipiTkConfig.cmake" @ONLY)
 install( FILES

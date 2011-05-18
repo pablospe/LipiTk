@@ -21,7 +21,7 @@ set( sources LTKCheckSumGenerate.cpp
              LTKImageWriter.cpp )
 
 # Include
-include_directories( ${LIPITK_SRC_INCLUDE} ${LIPITK_SRC_UTILS_LIB} )
+include_directories( ${LIPITK_SRC_INCLUDE} ${LIPITK_SRC_UTILS_LIB} ${LIPITK_CONFIG} )
 
 # Static
 add_library( ${PROJECT_NAME} SHARED ${sources} )

@@ -76,6 +76,9 @@ set( LIPITK_WORDREC_BOXFLD ${LIPITK_WORDREC}/boxfld )
 set( LIPITK_SAMPLES_SHAPERECTST ${LIPITK_SAMPLES}/shaperectst )
 set( LIPITK_SAMPLES_WORDRECTST ${LIPITK_SAMPLES}/wordrectst )
 
+# For internal use
+set( LIPITK_CONFIG ${CMAKE_BINARY_DIR}/include )
+
 
 # Include all headers
 set( LIPITK_INCLUDE ${LIPITK_SRC_INCLUDE}
@@ -91,7 +94,8 @@ set( LIPITK_INCLUDE ${LIPITK_SRC_INCLUDE}
                     ${LIPITK_SHAPEREC_FE_POINTFLOAT}
                     ${LIPITK_SHAPEREC_FE_SS}
                     ${LIPITK_WORDREC_BOXFLD}
-                    ${LIPITK_LIPIENGINE} )
+                    ${LIPITK_LIPIENGINE}
+                    ${LIPITK_CONFIG} )
 
 
 # DYNAMIC_LIB

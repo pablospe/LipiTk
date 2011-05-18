@@ -60,9 +60,6 @@ FN_PTR_GETINSTANCE LTKLoggerUtil::module_getInstanceLogger = NULL;
 FN_PTR_DESTROYINSTANCE LTKLoggerUtil::module_destroyLogger = NULL;
 ofstream LTKLoggerUtil::m_emptyStream;
 
-LTKLoggerInterface* ptrLog;
-
-
 /****************************************************************************
 * AUTHOR		: Nidhi Sharma
 * DATE			: 09-Jul-2007
@@ -124,7 +121,7 @@ int LTKLoggerUtil::createLogger(const string& lipiRoot)
     	functionHandle = NULL;
     }
 
-    ptrLog = module_getInstanceLogger();
+    module_getInstanceLogger();
 
     // map destoylogger function
     if (module_destroyLogger == NULL)
@@ -261,7 +258,7 @@ int LTKLoggerUtil::getAddressLoggerFunctions()
     void* functionHandle = NULL; 
     int returnVal = SUCCESS;
 
-/*
+
     //start log
     
     if (module_startLogger == NULL )
@@ -298,9 +295,8 @@ int LTKLoggerUtil::getAddressLoggerFunctions()
 
     	functionHandle = NULL;    
     
-    }*/
-
-    module_logMessage = (FN_PTR_LOGMESSAGE) logMessage;
+    }
+    
 	
 	return SUCCESS;
 	
@@ -321,41 +317,33 @@ int LTKLoggerUtil::getAddressLoggerFunctions()
 
 ostream& LTKLoggerUtil::logMessage(LTKLogger::EDebugLevel logLevel, string inStr, int lineNumber)
 {
-// 	m_ptrOSUtil = LTKOSUtilFactory::getInstance();
-// 
-// 	if (m_libHandleLogger == NULL)
-// 	{
-// 		m_libHandleLogger = m_ptrOSUtil->getLibraryHandle(LOGGER_MODULE_STR);
-// 
-// 		if (m_libHandleLogger == NULL)
-// 		{
-// 			delete m_ptrOSUtil;
-// 			return m_emptyStream;
-// 		}
-// 	}
-// 
-// 
-// 	// get function addresses
-//     if ( module_startLogger == NULL ||
-//         module_logMessage == NULL )
-//     {
-//         int returnVal = getAddressLoggerFunctions();
-// 
-//         if(returnVal != SUCCESS)
-//     	{
-// 			delete m_ptrOSUtil;
-//     	    return m_emptyStream;
-//     	}
-//     }
-// 
-// 	delete m_ptrOSUtil;
-//    
-//     return module_logMessage(logLevel, inStr, lineNumber);
+	m_ptrOSUtil = LTKOSUtilFactory::getInstance();
 
-    if( ptrLog == NULL )
+	if (m_libHandleLogger == NULL)
+	{
+		m_libHandleLogger = m_ptrOSUtil->getLibraryHandle(LOGGER_MODULE_STR);
+
+		if (m_libHandleLogger == NULL)
+		{
+			delete m_ptrOSUtil;
+			return m_emptyStream;
+		}
+	}
+
+
+	// get function addresses
+    if ( module_startLogger == NULL ||
+        module_logMessage == NULL )
     {
-        return m_emptyStream;
+        int returnVal = getAddressLoggerFunctions();
+
+        if(returnVal != SUCCESS)
+    	{
+			delete m_ptrOSUtil;
+    	    return m_emptyStream;
+    	}
     }
-    
-    return (*ptrLog)(logLevel, inStr, lineNumber);    
+
+	delete m_ptrOSUtil;
+    return module_logMessage(logLevel, inStr, lineNumber);
 }

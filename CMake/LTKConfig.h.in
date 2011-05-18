@@ -1,6 +1,8 @@
 #ifndef __LTKCONFIG_H
 #define __LTKCONFIG_H
 
-#define LIPI_ROOT "@LIPI_CMAKE_DIR@"
+#include <string>
+
+const std::string LIPI_ROOT( "@LIPI_CMAKE_DIR@" );
 
 #endif
