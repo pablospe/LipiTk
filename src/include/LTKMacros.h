@@ -44,6 +44,7 @@
 #include <string.h>
 
 #include "LTKTypes.h"
+#include "LTKConfig.h"
 
 /** @file LTKmacros.h
 * @brief Contains the macors used in reco/shaperec/pca and reco/shaperec/dtw modules.
@@ -95,11 +96,6 @@
 #define LOGGER_MODULE_STR "logger"
 
 /**
-* @brief Defines the Lipi Root environment string
-*/
-#define LIPIROOT "$LIPI_ROOT"
-
-/**
 * @brief Defines the project is dynamic, where the numshapes can take any number of values
 */
 #define DYNAMIC "Dynamic"
@@ -141,11 +137,6 @@
 * @brief Defines the maximum string length
 */
 #define MAX_STRLEN				255
-
-/**
-* @brief Defines the lipi root environment string used in LipiEngine.cfg
-*/
-#define LIPIROOT_ENV_STRING	"LIPI_ROOT"
 
 /**
 * @brief Defines the type of project used in LipiEngine.cfg

@@ -202,16 +202,15 @@ int main(int argc, char* argv[])
 
     if (m_strLipiRootPath.empty())
     {
-		char* envstring = NULL;
-		envstring = getenv(LIPIROOT_ENV_STRING);
+		string envstring( LIPI_ROOT );
 
-		if(envstring == NULL )
+		if(envstring == "" )
 		{
 			cout << "Error, Environment variable is not set LIPI_ROOT" << endl;
 			return FAILURE;
 		}
 		m_strLipiRootPath = envstring;
-		envstring = NULL;
+		envstring = "";
     }
     
     // Configure logger
