@@ -270,7 +270,7 @@ int main(int argc,char *argv[]){
 #else
           //[Balaji][16-Apr-2009] "Segmentation fault" when open temp dir.
           //                      If temp directory doesn't have a permission
-          existingTempDir = getenv(LIPIROOT_ENV_STRING) ;
+          existingTempDir = LIPI_ROOT;
 
           if(existingTempDir.empty())
                existingTempDir = getenv("ROOT") ;

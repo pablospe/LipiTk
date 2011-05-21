@@ -150,7 +150,7 @@ int main(int argc, char** argv)
 
 		if(lipiroot.empty())
 		{
-			char *lipipath = getenv(LIPIROOT_ENV_STRING);
+			const char *lipipath = LIPI_ROOT.c_str();
 
 			if(NULL == lipipath)
 			{

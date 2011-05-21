@@ -49,7 +49,6 @@ LTKOSUtil* utilPtr = LTKOSUtilFactory::getInstance();
 
 int main(int argc, char** argv)
 {
-	char *envstring = NULL;
 	int iResult;
 	string tempStr(REC_UNIT_INFO), tempStr1(REC_MODE);
 	string path;
@@ -76,8 +75,8 @@ int main(int argc, char** argv)
 	}
 
 	// Get the LIPI_ROOT environment variable 
-	envstring = getenv(LIPIROOT_ENV_STRING);
-	if(envstring == NULL)
+	string envstring( LIPI_ROOT );
+	if(envstring == "")
 	{
 		cout << "\nError, Environment variable is not set LIPI_ROOT\n";
         delete utilPtr;
