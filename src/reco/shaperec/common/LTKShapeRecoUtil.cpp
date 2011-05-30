@@ -141,7 +141,7 @@ int LTKShapeRecoUtil::getAbsolutePath (const string& inputPath,
     }
 
     //The first token must be the $LIPI_ROOT. Otherwise return from the function
-    if (tokens[0] != LIPIROOT)
+    if (tokens[0] != LIPI_ROOT)
     {
 		outPath = inputPath;
         return SUCCESS;

@@ -41,7 +41,6 @@
 #include "LTKLinuxUtil.h"
 #include "LTKMacros.h"
 #include "LTKLoggerUtil.h"
-#include "LTKConfig.h"
 
 #include <dlfcn.h>
 #include <stdio.h>

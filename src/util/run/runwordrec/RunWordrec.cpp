@@ -117,19 +117,17 @@ int main(int argc, char** argv)
 
 	if(strlen(strLipiRootPath)==0)
 	{
-		char *tempStr=NULL;
-
 		/* Get the LIPI_ROOT environment variable */
-		tempStr=getenv(LIPIROOT_ENV_STRING);
+		string tempStr( LIPI_ROOT );
 		
 
-		if(tempStr == NULL)
+		if(tempStr == "")
 		{
 			cout << "Error,LIPI_ROOT is neither provided in the command line nor set as an environment variable\n" << endl;
 			delete utilPtr;
 			return -1;
 		}
-		strcpy(strLipiRootPath,tempStr);
+		strcpy(strLipiRootPath, tempStr.c_str());
 	}
 
 
@@ -901,7 +899,7 @@ int getAbsolutePath (string &pathName, const string lipiRootPath)
 	LTKStringUtil::tokenizeString(pathName,  "\\/",  tokens);
 
 	//The first token must be the $LIPI_ROOT. Otherwise return from the function
-	if (tokens[0] != LIPIROOT)
+	if (tokens[0] != LIPI_ROOT)
 	{
 		return SUCCESS;
 	}

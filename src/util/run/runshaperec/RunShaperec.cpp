@@ -127,7 +127,7 @@ int globalArgCount = 0;
 
 int main(int argc, char** argv)
 {
-	char *envstring = NULL;
+	string envstring;
 	int iErrorCode;
     void * functionHandle = NULL;
     LTKOSUtil* utilPtr = LTKOSUtilFactory::getInstance();
@@ -162,17 +162,17 @@ int main(int argc, char** argv)
 	/* Get the LIPI_ROOT environment variable */
 	envstring = strLipiRootPath;
 
-	if(strlen(envstring) == 0)
+	if(envstring.size() == 0)
 	{
-		envstring = getenv(LIPIROOT_ENV_STRING);
+		envstring = LIPI_ROOT;
 
-		if(envstring == NULL )
+		if(envstring == "" )
 		{
 			cout << "Error, Environment variable is not set LIPI_ROOT" << endl;
             delete utilPtr;
 			return -1;
 		}
-		strcpy(strLipiRootPath, envstring );
+		strcpy(strLipiRootPath, envstring.c_str() );
 
 	}
 
@@ -1111,7 +1111,7 @@ int getAbsolutePath (string &pathName, const string lipiRootPath)
 	LTKStringUtil::tokenizeString(pathName,  "\\/",  tokens);
 
 	//The first token must be the $LIPI_ROOT. Otherwise return from the function
-	if (tokens[0] != LIPIROOT)
+	if (tokens[0] != LIPI_ROOT)
 	{
 		return SUCCESS;
 	}

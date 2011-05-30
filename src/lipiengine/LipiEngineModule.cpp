@@ -636,7 +636,7 @@ void LTKLipiEngineModule::setLipiRootPath(const string& appLipiPath)
 
 	if ( appLipiPath.empty())
 	{
-		m_strLipiRootPath = m_OSUtilPtr->getEnvVariable(LIPIROOT_ENV_STRING);
+		m_strLipiRootPath = LIPI_ROOT;
 	}
 	else
 	{
