@@ -76,9 +76,10 @@ set( LIPITK_WORDREC_BOXFLD ${LIPITK_WORDREC}/boxfld )
 set( LIPITK_SAMPLES_SHAPERECTST ${LIPITK_SAMPLES}/shaperectst )
 set( LIPITK_SAMPLES_WORDRECTST ${LIPITK_SAMPLES}/wordrectst )
 
-# For internal use
-set( LIPITK_CONFIG ${CMAKE_BINARY_DIR}/include )
 
+#############################################
+##   Variables for internal use
+#############################################
 
 # Include all headers
 set( LIPITK_INCLUDE ${LIPITK_SRC_INCLUDE}
@@ -118,30 +119,32 @@ set( LIPITK_STATIC_LIB  util
                         shaperecommon
                         wordreccommon )
 
+# Others dependencies
 set( LINKLIB stdc++ dl )
 
-# Link libraries
-set( LIPITK_LIB ${LIPITK_DYNAMIC_LIB} ${LIPITK_STATIC_LIB} )
+# Location of "LTKconfig.h", before installation
+set( LIPITK_CONFIG ${CMAKE_BINARY_DIR}/include )
 
+
+
+#############################################
+##   Variables to be exported. Once installed
+#############################################
 
 set( LIPITK_DYNAMIC_LIBDIR ${CMAKE_INSTALL_PREFIX}/lib  )
 set( LIPITK_STATIC_LIBDIR  ${CMAKE_INSTALL_PREFIX}/lib/static  )
-set( LIPITK_LIBDIR ${LIPITK_DYNAMIC_LIBDIR} ${LIPITK_STATIC_LIBDIR} )
 
+#  LIPITK_INCLUDE_DIRS   - include directories for LIPITK
+set( LIPITK_INCLUDE_DIRS   ${CMAKE_INSTALL_PREFIX}/include/ 
+                           ${CMAKE_INSTALL_PREFIX}/include/util 
+                           ${CMAKE_INSTALL_PREFIX}/include/shaperec
+                           ${CMAKE_INSTALL_PREFIX}/include/shaperec/featureextractor 
+                           ${CMAKE_INSTALL_PREFIX}/include/wordrec 
+                           ${CMAKE_INSTALL_PREFIX}/include/lipiengine 
+                           ${CMAKE_INSTALL_PREFIX}/include/logger )
 
+#  LIPITK_LIBRARIES      - libraries to link against
+set( LIPITK_LIBRARIES      ${LIPITK_DYNAMIC_LIB} ${LIPITK_STATIC_LIB} )
 
-
-
-# Variables exportadas. Una vez instalado!!!
-
-set( LIPITK_INCLUDE_DIRS ${CMAKE_INSTALL_PREFIX}/include/ 
-                         ${CMAKE_INSTALL_PREFIX}/include/util 
-                         ${CMAKE_INSTALL_PREFIX}/include/shaperec
-                         ${CMAKE_INSTALL_PREFIX}/include/shaperec/featureextractor 
-                         ${CMAKE_INSTALL_PREFIX}/include/wordrec 
-                         ${CMAKE_INSTALL_PREFIX}/include/lipiengine 
-                         ${CMAKE_INSTALL_PREFIX}/include/logger )
-
-
+#  LIPITK_LIBRARIES_DIRS - library directories for LIPITK
 set( LIPITK_LIBRARIES_DIRS ${LIPITK_DYNAMIC_LIBDIR} ${LIPITK_STATIC_LIBDIR} )
-set( LIPITK_LIBRARIES ${LIPITK_DYNAMIC_LIB} ${LIPITK_STATIC_LIB} )
