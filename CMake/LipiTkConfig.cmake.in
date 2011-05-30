@@ -1,8 +1,8 @@
-# - Config file for the FooBar package
+# - Config file for the LIPITK package
 # It defines the following variables
-#  LIPITK_INCLUDE_DIRS   - include directories for FooBar
+#  LIPITK_INCLUDE_DIRS   - include directories for LIPITK
 #  LIPITK_LIBRARIES      - libraries to link against
-#  LIPITK_LIBRARIES_DIRS - library directories for FooBar (normally not used!)
+#  LIPITK_LIBRARIES_DIRS - library directories for LIPITK
 
 # Tell the user project where to find our headers and libraries
 set( LIPITK_INCLUDE_DIRS   "@LIPITK_INCLUDE_DIRS@" )
